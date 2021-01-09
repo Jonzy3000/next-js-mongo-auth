@@ -6,8 +6,6 @@ import styles from "./header.module.css";
 // rendering, and avoids any flash incorrect content on initial page load.
 export function Header() {
   const [session, loading] = useSession();
-  console.log(JSON.stringify(session));
-  console.log(loading);
 
   return (
     <header>

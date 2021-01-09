@@ -14,7 +14,8 @@
     "next": "10.0.5",
     "next-auth": "^3.1.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "typeorm": "^0.2.28"
   },
   "peerOptionalDependencies": {
     "mongodb": "^3.6.0"

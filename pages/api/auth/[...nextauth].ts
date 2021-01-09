@@ -14,18 +14,7 @@ const options: InitOptions = {
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-  events: {
-    signIn: async ({ user }: any) => {
-      const { db } = await connectToDatabase();
-      await db
-        .collection("users")
-        .updateOne(
-          { email: user.email },
-          { $set: { name: user.name, email: user.email } },
-          { upsert: true }
-        );
-    },
-  },
+  database: process.env.MONGO_DB_URI,
 };
 
 export default (req, res) => NextAuth(req, res, options);
